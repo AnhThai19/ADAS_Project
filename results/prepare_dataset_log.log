@@ -1,0 +1,20 @@
+[INFO]: START converting phase : train
+[INFO]: END phase : train | json_used=10000, converted=9941
+[INFO]: START converting phase : val
+[INFO]: END phase : val | json_used=2000, converted=1983
+[INFO]: START converting phase : test
+[INFO]: END phase : test | json_used=2000, converted=1987
+[INFO]: 
+========== CONVERT SUMMARY ==========
+[INFO]: Total JSON files processed: 14000
+[INFO]: Total images converted: 13911
+[INFO]: Total missing images: 0
+[INFO]: Total empty labels: 89
+[INFO]: 
+Object counts:
+[INFO]:   car: 143430
+[INFO]:   person: 18442
+[INFO]:   bus: 2324
+[INFO]:   truck: 6033
+[INFO]:   bike: 1377
+[INFO]:   motor: 586
