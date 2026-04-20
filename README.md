@@ -87,33 +87,28 @@ https://bdd-data.berkeley.edu/
 Expected structure:
 ```
 data/
-├── raw_video/ # Input video for inference/demo
-│ └── sample_video.mp4
-│
-├── raw/
-│ ├── bdd100k_images_100k/
-│ │ └── 100k/
-│ │   ├── train/
-│ │   ├── val/
-│ │   └── test/
-│ │
-│ └── bdd100k_labels/
-│   └── 100k/
-│     ├── train/
-│     ├── val/
-│     └── test/
-│
-└── processed/
-│ ├── processed_bdd100k/
-├── images/
-│ ├── train/
-│ ├── val/
-│ └── test/
-│
-└── labels/
-├── train/
-├── val/
-└── test/
+├── raw_video/              # Video gốc dùng cho inference hoặc demo
+│   └── sample_video.mp4
+├── raw/                    # Dữ liệu gốc (Raw) tải về từ BDD100K
+│   ├── bdd100k_images/
+│   │   └── 100k/
+│   │       ├── train/
+│   │       ├── val/
+│   │       └── test/
+│   └── bdd100k_labels/
+│       └── 100k/
+│           ├── train/
+│           ├── val/
+│           └── test/
+└── processed/              # Dữ liệu đã qua tiền xử lý (Resize, chuẩn hóa, định dạng YOLO...)
+    ├── images/
+    │   ├── train/
+    │   ├── val/
+    │   └── test/
+    └── labels/
+        ├── train/
+        ├── val/
+        └── test/
 ```
 
 ---
