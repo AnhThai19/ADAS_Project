@@ -34,6 +34,7 @@ This approach enables a more robust and practical risk estimation for real-world
 ## 🧠 System Design
 
 ### Pipeline
+```
 Input Video
 ↓
 YOLOv8 Detection
@@ -47,6 +48,7 @@ Distance estimation (pixel-based geometry)
 Risk classification
 ↓
 Visualization (bbox + label + warning)
+```
 
 ---
 
@@ -123,11 +125,11 @@ adas-realtime-warning/
 
 💡 Design Insight
 
-Instead of using naive distance estimation, this system prioritizes objects based on their spatial relationship to the vehicle.
+- Instead of using naive distance estimation, this system prioritizes objects based on their spatial relationship to the vehicle.
 
-A trapezoidal ROI is used to focus on the forward driving region, improving robustness and reducing irrelevant detections.
+- A trapezoidal ROI is used to focus on the forward driving region, improving robustness and reducing irrelevant detections.
 
-This approach avoids the need for camera calibration while still providing meaningful risk estimation.
+- This approach avoids the need for camera calibration while still providing meaningful risk estimation.
 
 ## ⚙️ Configuration
 
@@ -149,8 +151,10 @@ roi:
   ```
 
 🚀 Quick Start
+```
 pip install -r requirements.txt
 python src/main.py
+```
   
 🧑‍💻 Tech Stack
 ```
