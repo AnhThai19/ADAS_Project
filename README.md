@@ -87,9 +87,9 @@ https://bdd-data.berkeley.edu/
 Expected structure:
 ```
 data/
-├── raw_video/              # Video gốc dùng cho inference hoặc demo
+├── raw_video/              # Original videos for inference or demo
 │   └── sample_video.mp4
-├── raw/                    # Dữ liệu gốc (Raw) tải về từ BDD100K
+├── raw/                    # Original BDD100K dataset  
 │   ├── bdd100k_images/
 │   │   └── 100k/
 │   │       ├── train/
@@ -100,7 +100,7 @@ data/
 │           ├── train/
 │           ├── val/
 │           └── test/
-└── processed/              # Dữ liệu đã qua tiền xử lý (Resize, chuẩn hóa, định dạng YOLO...)
+└── processed/              # Preprocessed data
     ├── images/
     │   ├── train/
     │   ├── val/
@@ -116,33 +116,29 @@ data/
 ## 🗂️ Project Structure
 ```
 adas-realtime-warning/
-│
-├── configs/
-│ └── config.yaml
-│
-├── data/
-│ ├── raw/
-│ └── processed/
-│
-├── models/
-│ └── best.pt
-│
-├── src/
-│ ├── detector.py
-│ ├── distance.py
-│ ├── risk.py
-│ ├── inference.py
-│ ├── utils.py
-│ └── main.py
-│
-├── results/
-│ ├── demo.mp4
-│ └── logs/
-│
-├── notebooks/
-│ └── data_exploration.ipynb
-│
-└── README.md
+├── configs/                # Configuration files (paths, hyperparameters)
+│   └── config.yaml
+├── data/                   # Dataset directory (add to .gitignore)
+│   ├── raw/                # Original BDD100K images/labels
+│   └── processed/          # Preprocessed data or frames
+├── models/                 # Model architectures and weights
+│   └── best.pt             # Trained model weights (e.g., YOLOv8)
+├── notebooks/              # Research, EDA, and prototyping
+│   └── data_exploration.ipynb
+├── results/                # Outputs from experiments
+│   ├── demo.mp4            # Inference result videos
+│   └── logs/               # Execution or training logs
+├── src/                    # Core source code (Business Logic)
+│   ├── __init__.py         # Makes 'src' a Python package
+│   ├── detector.py         # Object detection logic
+│   ├── distance.py         # Distance estimation algorithms
+│   ├── risk.py             # Collision risk assessment/warning logic
+│   ├── inference.py        # Model inference pipeline
+│   ├── utils.py            # Helper functions (plotting, math)
+│   └── main.py             # Main entry point of the application
+├── .gitignore              # Files and folders to be ignored by Git
+├── requirements.txt        # List of Python dependencies
+└── README.md               # Project documentation and setup guide
 ```
 
 ---
