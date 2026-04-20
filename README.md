@@ -153,11 +153,12 @@ pip install -r requirements.txt
 python src/main.py
   
 🧑‍💻 Tech Stack
+```
 Python
 OpenCV
 YOLOv8 (Ultralytics)
 NumPy
-
+```
 ⚠️ Note
 
 This is a prototype ADAS system for educational purposes and is not intended for real-world deployment.
