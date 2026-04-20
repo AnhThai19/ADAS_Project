@@ -118,25 +118,27 @@ data/
 adas-realtime-warning/
 ├── configs/                # Configuration files (paths, hyperparameters)
 │   └── config.yaml
-├── data/                   # Dataset directory (add to .gitignore)
+├── data/                   
 │   ├── raw/                # Original BDD100K images/labels
-│   └── processed/          # Preprocessed data or frames
-├── models/                 # Model architectures and weights
-│   └── best.pt             # Trained model weights (e.g., YOLOv8)
+│   └── processed/          # Preprocessed data
+│   └── raw_video/          # Raw video
+├── models/                 
+│   └── best.pt             # Trained model weights (YOLOv8)
 ├── notebooks/              # Research, EDA, and prototyping
 │   └── data_exploration.ipynb
-├── results/                # Outputs from experiments
+├── results/                
 │   ├── demo.mp4            # Inference result videos
-│   └── logs/               # Execution or training logs
-├── src/                    # Core source code (Business Logic)
-│   ├── __init__.py         # Makes 'src' a Python package
-│   ├── detector.py         # Object detection logic
-│   ├── distance.py         # Distance estimation algorithms
-│   ├── risk.py             # Collision risk assessment/warning logic
-│   ├── inference.py        # Model inference pipeline
-│   ├── utils.py            # Helper functions (plotting, math)
-│   └── main.py             # Main entry point of the application
-├── .gitignore              # Files and folders to be ignored by Git
+│   └── logs/               # Prepare dataset logs
+├── src/                    # Core logic     
+│   ├── detector.py          
+│   ├── distance.py          
+│   ├── risk.py            
+│   ├── inference.py         
+│   ├── utils.py            
+│   └── main.py              
+├── scripts/               
+│   ├── convert_bdd100k_to_yolo.py
+│   └── training_yolov8n.py
 ├── requirements.txt        # List of Python dependencies
 └── README.md               # Project documentation and setup guide
 ```
