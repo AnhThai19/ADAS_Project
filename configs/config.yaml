@@ -1,0 +1,32 @@
+model:
+  path: ../models/best.pt
+  imgsz: 640
+  conf_threshold: 0.35
+
+input:
+  video_path: ../data/raw_video/vn_street_2.mp4
+
+output:
+  save_dir: ../results
+  video_name: demo_vn_street_1.mp4
+  save_video: true
+  show_window: true
+
+risk:
+  danger_vertical_thresh: 80
+  warning_vertical_thresh: 180
+  danger_offset_thresh: 70
+  warning_offset_thresh: 140
+
+roi:
+  top_ratio: 0.65
+  top_width_ratio: 0.35
+  bottom_width_ratio: 0.80
+
+classes:
+  0: car
+  1: truck
+  2: bus
+  3: person
+  4: bike
+  5: motor
