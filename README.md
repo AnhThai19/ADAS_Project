@@ -73,6 +73,22 @@ Origin point: Bottom-center of frame (ego vehicle position)
 
 ---
 
+## 📥 Dataset
+
+This project uses the BDD100k dataset.
+
+Due to size limitations, the dataset is not included in this repository.
+
+Download:
+https://bdd-data.berkeley.edu/
+
+Expected structure:
+data/
+├── raw/
+├── processed/
+
+---
+
 ## 🗂️ Project Structure
 adas-realtime-warning/
 │
@@ -105,6 +121,14 @@ adas-realtime-warning/
 
 ---
 
+💡 Design Insight
+
+Instead of using naive distance estimation, this system prioritizes objects based on their spatial relationship to the vehicle.
+
+A trapezoidal ROI is used to focus on the forward driving region, improving robustness and reducing irrelevant detections.
+
+This approach avoids the need for camera calibration while still providing meaningful risk estimation.
+
 ## ⚙️ Configuration
 
 All parameters are configurable via: configs/config.yaml
@@ -123,29 +147,17 @@ roi:
   top_width_ratio: 0.22
   bottom_width_ratio: 0.60
   ```
-  
-🚀 How to Run
-1. Install dependencies
-pip install -r requirements.txt
-2. Run the system
-python src/main.py
-3. Output
-Real-time visualization window
-Output video saved in:
-results/demo.mp4
 
-📈 Performance
-Real-time processing (~15–30 FPS depending on hardware)
-Lightweight model (YOLOv8n)
-🔥 Future Improvements
-Convert to ONNX for faster inference
-Add sound alert for danger events
-Multi-object risk prioritization
-Bird's Eye View (IPM) transformation
-Deploy API with FastAPI
-Web demo with Streamlit
+🚀 Quick Start
+pip install -r requirements.txt
+python src/main.py
+  
 🧑‍💻 Tech Stack
 Python
 OpenCV
 YOLOv8 (Ultralytics)
 NumPy
+
+⚠️ Note
+
+This is a prototype ADAS system for educational purposes and is not intended for real-world deployment.
