@@ -85,13 +85,41 @@ Download:
 https://bdd-data.berkeley.edu/
 
 Expected structure:
+```
 data/
+├── raw_video/ # Input video for inference/demo
+│ └── sample_video.mp4
+│
 ├── raw/
-├── processed/
+│ ├── bdd100k_images_100k/
+│ │ └── 100k/
+│ │   ├── train/
+│ │   ├── val/
+│ │   └── test/
+│ │
+│ └── bdd100k_labels/
+│   └── 100k/
+│     ├── train/
+│     ├── val/
+│     └── test/
+│
+└── processed/
+│ ├── processed_bdd100k/
+├── images/
+│ ├── train/
+│ ├── val/
+│ └── test/
+│
+└── labels/
+├── train/
+├── val/
+└── test/
+```
 
 ---
 
 ## 🗂️ Project Structure
+```
 adas-realtime-warning/
 │
 ├── configs/
@@ -120,6 +148,7 @@ adas-realtime-warning/
 │ └── data_exploration.ipynb
 │
 └── README.md
+```
 
 ---
 
